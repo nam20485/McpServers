@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Octokit;
 using System.Text.Json;
-using System.Text.Json.Serialization;+
+using System.Text.Json.Serialization;
 
 namespace GitHubMcpServer;
 
