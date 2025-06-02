@@ -44,20 +44,11 @@ A Model Context Protocol (MCP) server that provides GitHub CLI tools through the
    ```bash
    $env:GITHUB_TOKEN = "your-github-token-here"
    ```
-   
-   Option B: Configuration file
-   Add to `appsettings.json`:
-   ```json
-   {
-     "GitHub": {
-       "Token": "your-github-token-here"
-     }
-   }
-   ```
 
 3. **Run the server:**
    ```bash
    dotnet run
+
    ```
 
 ### VS Code Integration
@@ -77,6 +68,7 @@ The server is automatically configured in your VS Code settings. Make sure you h
   "arguments": {
     "owner": "octocat"
   }
+
 }
 ```
 
@@ -122,7 +114,7 @@ The server is automatically configured in your VS Code settings. Make sure you h
 
 ## Contributing
 
-This MCP server is part of the AgentAsAService solution. To contribute:
+This MCP server is part of the MCPServers solution. To contribute:
 
 1. Follow ASP.NET Core best practices
 2. Ensure all new tools have proper input validation
