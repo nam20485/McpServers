@@ -12,6 +12,8 @@ namespace GitHubMcpServer;
 
 public class Program
 {
+    private const string TOKEN_ENV_VAR_NAME = "MCPSERVER_GH_TOKEN";
+
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -40,8 +42,8 @@ public class Program
                 
                 // Configure GitHub client
                 var githubToken = configuration["GitHub:Token"] ?? 
-                                Environment.GetEnvironmentVariable("GITHUB_TOKEN") ??
-                                throw new InvalidOperationException("GitHub token not found. Set GITHUB_TOKEN environment variable or add GitHub:Token to appsettings.json");
+                                Environment.GetEnvironmentVariable(TOKEN_ENV_VAR_NAME) ??
+                                throw new InvalidOperationException($"GitHub token not found. Set {TOKEN_ENV_VAR_NAME} environment variable");
                 
                 var githubClient = new GitHubClient(new ProductHeaderValue("GitHubMcpServer", "1.0.0"))
                 {
