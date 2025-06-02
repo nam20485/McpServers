@@ -81,3 +81,5 @@ node_modules/
 .yarnrc.yml
 
 # End of .gitignore
+
+.fake
